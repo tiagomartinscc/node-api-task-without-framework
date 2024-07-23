@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "7d1a7af5-bac5-470d-91e0-6b3d42caeb82",
+		"name": "Tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3884423",
+		"_collection_link": "https://restless-desert-6682.postman.co/workspace/api~99d19916-6e99-47d9-a42a-9236fae99931/collection/3884423-7d1a7af5-bac5-470d-91e0-6b3d42caeb82?action=share&source=collection_link&creator=3884423"
+	},
+	"item": [
+		{
+			"name": "List Tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}/tasks?search=Task",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Task"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"study javascript\",\r\n    \"description\": \"study about nodejs and building api server\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}/tasks",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"study javascript again\",\r\n    \"description\": \"study more about nodejs and building api server\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}/tasks/17eaa3eb-6e27-423e-b4c2-0e807f5a2bfb",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"tasks",
+						"17eaa3eb-6e27-423e-b4c2-0e807f5a2bfb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "complete task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"study javascript again\",\r\n    \"description\": \"study more about nodejs and building api server\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}/tasks/17eaa3eb-6e27-423e-b4c2-0e807f5a2bfb/complete",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"tasks",
+						"17eaa3eb-6e27-423e-b4c2-0e807f5a2bfb",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}/tasks/d0da1138-427f-409e-9d61-d7099dccb626",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"tasks",
+						"d0da1138-427f-409e-9d61-d7099dccb626"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "BASEURL",
+			"value": "http://localhost:3333"
+		}
+	]
+}
