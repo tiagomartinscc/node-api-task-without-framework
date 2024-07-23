@@ -5,7 +5,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "node --watch src/server.js"
+    "dev": "node --watch src/server.js",
+    "import": "node csv/import.js"
   },
   "author": "Tiago Martins",
   "license": "ISC",
